@@ -15,12 +15,13 @@ public class BufferedFileManager {
         File newFile = new File("resources/newFile.txt");
         //create writer for the newfile
         BufferedWriter writer = new BufferedWriter(new FileWriter(newFile));
+        //writer will overwrite very time 
 
         String line;
 
         while(( line = reader.readLine()) != null){
             if(!line.equals("")){
-                writer.append(line);
+                writer.append(line.trim() + "\n");
                 System.out.println("friyay I've added a new line. Its lit!");
 
             }
